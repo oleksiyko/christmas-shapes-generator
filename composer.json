@@ -1,0 +1,30 @@
+{
+  "name": "oleksiyko/christmas-shapes-generator",
+  "description": "Generator of ASCII Christmas shapes",
+  "authors": [
+    {
+      "name": "Oleksii Postolovskyi",
+      "email": "postolovskiy.oleksiy@gmail.com"
+    }
+  ],
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "ShapeGenerator\\": ["src/"]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ShapeGenerator\\": ["tests/"]
+    }
+  },
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.2.*"
+  },
+  "minimum-stability": "dev"
+}

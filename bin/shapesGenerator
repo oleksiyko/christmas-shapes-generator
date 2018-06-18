@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+use ShapeGenerator\Application;
+
+$size = null;
+$options = getopt('s::', ['size::']);
+if ($options && (isset($options['s'])|| isset($options['size']))) {
+    $size = $options['s'] ?? $options['size'];
+}
+
+try {
+    print(Application::run($size) . PHP_EOL);
+} catch (\Exception $ex) {
+    printf('ERROR: %s %s', $ex->getMessage(), PHP_EOL);
+}
